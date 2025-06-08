@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reminder Menu</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  :root {
+    --color-bg: #ffffff;
+    --color-primary: #4f46e5;
+    --color-gray-light: #f3f4f6;
+    --color-gray-medium: #6b7280;
+    --color-gray-dark: #374151;
+    --color-accent: #6366f1;
+    --border-radius: 0.75rem;
+    --transition-speed: 0.3s;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .reminder-menu {
+    background: var(--color-bg);
+    box-shadow: 0 8px 24px rgba(99,102,241,0.15);
+    border-radius: var(--border-radius);
+    padding: 1rem 1.25rem;
+    width: 260px;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+
+  .reminder-menu h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem 0;
+    color: var(--color-primary);
+  }
+
+  /* Time input style */
+  .time-input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  input[type="time"] {
+    width: 150px;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border: 1.5px solid var(--color-gray-light);
+    border-radius: 0.5rem;
+    transition: border-color var(--transition-speed);
+    font-family: 'Poppins', sans-serif;
+    outline-offset: 2px;
+  }
+  input[type="time"]:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 6px var(--color-accent);
+  }
+
+  /* Days of week toggle buttons */
+  .days-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .day-toggle {
+    flex: 1;
+    background-color: var(--color-gray-light);
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-gray-medium);
+    line-height: 2.4rem;
+    user-select: none;
+    transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
+    border: 1.5px solid transparent;
+  }
+  .day-toggle:hover {
+    background-color: #e0e7ff;
+  }
+  .day-toggle.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: scale(1.05);
+  }
+
+  /* Set button */
+  .set-button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    background: var(--color-primary);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+  .set-button:hover {
+    background-color: #4338ca;
+    transform: scale(1.03);
+  }
+  .set-button:focus {
+    outline-offset: 2px;
+    outline: 3px solid #a5b4fc;
+  }
+
+  /* Confirmation message */
+  .confirmation {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-align: center;
+    min-height: 1.4em;
+  }
+</style>
+</head>
+<body>
+  <div class="reminder-menu" role="region" aria-label="Set Reminder Menu">
+    <h2>Set Reminder</h2>
+    <div class="time-input-container">
+      <input type="time" id="reminder-time" aria-label="Reminder time" />
+    </div>
+    <div class="days-container" role="group" aria-label="Select days of the week">
+      <div class="day-toggle" role="checkbox" aria-checked="false" tabindex="0" data-day="Sun">Sun</div>
+      <div class="day-toggle" role="checkbox" aria-checked="false" tabindex="0" data-day="Mon">Mon</div>
+      <div class="day-toggle" role="checkbox" aria-checked="false" tabindex="0" data-day="Tue">Tue</div>
+      <div class="day-toggle" role="checkbox" aria-checked="false" tabindex="0" data-day="Wed">Wed</div>
+      <div class="day-toggle" role="checkbox" aria-checked="false" tabindex="0" data-day="Thu">Thu</div>
+      <div class="day-toggle" role="checkbox" aria-checked="false" tabindex="0" data-day="Fri">Fri</div>
+      <div class="day-toggle" role="checkbox" aria-checked="false" tabindex="0" data-day="Sat">Sat</div>
+    </div>
+    <button type="button" class="set-button" id="set-reminder-btn">Set Reminder</button>
+    <div class="confirmation" aria-live="polite" aria-atomic="true"></div>
+  </div>
+
+<script>
+  // Toggle day active state and aria-checked on click or keyboard enter/space
+  const dayToggles = document.querySelectorAll('.day-toggle');
+  dayToggles.forEach(dayToggle => {
+    dayToggle.addEventListener('click', () => {
+      toggleDay(dayToggle);
+    });
+    dayToggle.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleDay(dayToggle);
+      }
+    });
+  });
+
+  function toggleDay(element) {
+    const isActive = element.classList.toggle('active');
+    element.setAttribute('aria-checked', isActive.toString());
+  }
+
+  // Handle set reminder button
+  document.getElementById('set-reminder-btn').addEventListener('click', () => {
+    const timeInput = document.getElementById('reminder-time').value;
+    const selectedDays = [...dayToggles]
+      .filter(dt => dt.classList.contains('active'))
+      .map(dt => dt.getAttribute('data-day'));
+    
+    const confirmation = document.querySelector('.confirmation');
+
+    if (!timeInput) {
+      confirmation.textContent = 'Please select a time.';
+      return;
+    }
+    if (selectedDays.length === 0) {
+      confirmation.textContent = 'Please select at least one day.';
+      return;
+    }
+
+    confirmation.textContent = `Reminder set for ${timeInput} on ${selectedDays.join(', ')}.`;
+  });
+</script>
+</body>
+</html>
+

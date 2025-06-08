@@ -1,0 +1,366 @@
+<html lang="pt-br">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Treinos do Fitoozone
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#f4f9ff] text-[#1a1a1a] min-h-screen flex flex-col">
+  <!-- Cabeçalho -->
+  <header class="bg-[#f4f9ff] border-b border-gray-200">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+     <div class="flex items-center space-x-3">
+      <img alt="Logotipo Fitoozone, letra F estilizada com figura abstrata" class="w-8 h-8" height="32" src="https://storage.googleapis.com/a1aa/image/ecd30030-a29e-4d56-96e8-75ba9ddaa48e.jpg" width="32"/>
+      <span class="font-semibold text-[#1a1a1a] text-lg select-none">
+       Fitoozone
+      </span>
+     </div>
+     <ul class="hidden md:flex items-center space-x-8 text-sm text-gray-500 select-none">
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+       <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="index.html">
+        <i class="far fa-circle text-xs"></i>
+        <span>Visão Geral</span>
+       </a>
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer text-[#6c4ee3] font-semibold bg-white rounded-full px-3 py-1 shadow-sm">
+       <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="treinos.html">
+        <i class="fas fa-dumbbell text-[#6c4ee3]"></i>
+        <span>Treinos</span>
+       </a>
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+       <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="actividade.html">
+        <i class="far fa-circle text-xs"></i>
+        <span>Atividade</span>
+       </a> 
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+       <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="usuario.html">
+        <i class="far fa-circle text-xs"></i>
+        <span>Usuário</span>
+       </a>
+      </li>
+     </ul>
+     <div class="hidden md:flex items-center space-x-3">
+      <div class="relative">
+       <input class="w-48 rounded-full bg-white border border-gray-300 text-sm pl-9 pr-3 py-1.5 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#6c4ee3]" placeholder="Pesquisar algo" type="text"/>
+       <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none"></i>
+      </div>
+      <button aria-label="Alternar modo escuro" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-[#6c4ee3] transition">
+       <i class="far fa-moon"></i>
+      </button>
+      <button aria-label="Notificações" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-[#6c4ee3] relative transition">
+       <i class="far fa-bell"></i>
+       <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-[#f44336] rounded-full border border-white"></span>
+      </button>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <!-- Conteúdo principal -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+   <h1 class="text-2xl font-extrabold mb-1 select-none">Treinos</h1>
+   <p class="text-xs text-gray-600 mb-5 select-none">Aqui estão suas atividades diárias e relatórios</p>
+   <!-- Filtros -->
+   <div class="flex flex-wrap gap-2 mb-6 select-none">
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">Limpar Tudo</button>
+    <button class="text-xs text-white bg-[#6c4ee3] rounded-full px-3 py-1 font-semibold">Iniciante</button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">Intermediário</button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">Avançado</button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">10-20 min</button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">20-40 min</button>
+   </div>
+   <!-- Grade de cartões de treino -->
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- Cartão 1 -->
+    <div id="treino-1" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher deitada em bola de exercício segurando haltere contra fundo azul" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/152fbdca-eb18-4278-22a7-3685952bacb4.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Força e Condicionamento</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 2 -->
+    <div id="treino-2" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher fazendo fluxo de ioga de força com faixa de resistência em fundo roxo" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/514916a5-e5ca-4331-f185-278bc9aa8818.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Fluxo de Ioga de Força</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 3 -->
+    <div id="treino-3" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher fazendo treino intervalado de alta intensidade em tapete rosa com fundo rosa" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/92db5b6e-f4cc-4d18-0e34-9d376e452dc0.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Intervalado de Alta Intensidade</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 4 -->
+    <div id="treino-4" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher fazendo aula de pilates reformer alongando em fundo cinza" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8da5b4dc-78c0-45b1-dc6a-7e30f1847f57.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Aula de Pilates Reformer</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 5 -->
+    <div id="treino-5" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher fazendo treino funcional de core com bola de exercício em fundo azul claro" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b07183b9-7333-4cb2-0be6-080d7edff8f9.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Treino Funcional de Core</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 6 -->
+    <div id="treino-6" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher fazendo treino de força calistênica com bola de exercício rosa em fundo rosa" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1f077bee-eed9-473f-3d73-0da1b4d4a9c0.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Treino de Força Calistênica</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 7 -->
+    <div id="treino-7" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher fazendo ioga para alívio de estresse em fundo roxo" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/29974232-00c7-4f54-dfcf-aaf97347f23b.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Ioga para Alívio de Estresse</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 8 -->
+    <div id="treino-8" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher fazendo circuito de escultura corporal com bola medicinal em fundo escuro" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/63906806-d638-4245-364e-b7b57c10d6b4.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Circuito de Escultura Corporal</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 9 -->
+    <div id="treino-9" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher deitada em bola de exercício laranja alongando em fundo cinza" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c3e8ce07-f9ad-4c38-4a19-1ae47d8128b7.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Alongamento com Bola</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 10 -->
+    <div id="treino-10" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Duas mulheres fazendo exercícios de core no chão contra paredes cinza clara" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2ad38952-b6ad-40e1-fe5f-fb82b1fa93cd.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Exercícios de Core</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 11 -->
+    <div id="treino-11" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher levantando halteres pequenos em roupa azul contra fundo azul" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7d7a771b-f0ec-4ba0-da25-ab382d8ec0fd.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Treino com Halteres</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Cartão 12 -->
+    <div id="treino-12" class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Mulher deitada para trás em bola de exercício com legging preta contra fundo branco" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/261af649-1058-4ee5-689a-0aebe0708069.jpg" width="400"/>
+     <button aria-label="Favoritar" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart"></i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">Estabilidade com Bola</h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">Iniciante</span> • 42 min
+      </p>
+     </div>
+    </div>
+   </div>
+  </main>
+  <!-- Rodapé -->
+  <footer class="bg-white border-t border-gray-200 py-2 text-xs text-gray-600 select-none">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <span>Direitos Autorais © 2023 Todos os Direitos Reservados</span>
+    <span class="flex items-center space-x-1">
+     <img alt="Logotipo Merkulove, letra M estilizada" class="w-4 h-4" height="16" src="https://storage.googleapis.com/a1aa/image/3b843428-33bf-4057-f834-d6a09dce44df.jpg" width="16"/>
+     <span>Design e Desenvolvimento por Merkulove</span>
+    </span>
+   </div>
+  </footer>
+  <!-- Pop-up de Iniciar Treino -->
+  <div id="start-workout-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+   <div class="bg-white rounded-lg p-6 w-full max-w-md">
+    <h2 class="text-lg font-semibold mb-4">Iniciar Sessão de Treino</h2>
+    <p class="text-sm text-gray-600 mb-6">Você está prestes a iniciar o treino: <span id="workout-name" class="font-semibold"></span>. Deseja começar agora?</p>
+    <div class="flex justify-end space-x-3">
+     <button id="cancel-workout" class="px-4 py-2 text-sm text-gray-600 bg-gray-200 rounded-full hover:bg-gray-300 transition">Cancelar</button>
+     <button id="start-workout" class="px-4 py-2 text-sm text-white bg-[#6c4ee3] rounded-full hover:bg-[#5b3ec7] transition">Iniciar</button>
+    </div>
+   </div>
+  </div>
+  <!-- Modal do Cronômetro -->
+  <div id="timer-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+   <div class="bg-white rounded-lg p-6 w-full max-w-md">
+    <h2 class="text-lg font-semibold mb-2">Treino: <span id="timer-workout-name"></span></h2>
+    <div id="timer-display" class="text-4xl font-bold text-center mb-6">00:00</div>
+    <div id="timer-status" class="text-sm text-gray-600 text-center mb-6 hidden">Treino Concluído!</div>
+    <div class="flex justify-center space-x-3">
+     <button id="pause-resume-timer" class="px-4 py-2 text-sm text-white bg-[#6c4ee3] rounded-full hover:bg-[#5b3ec7] transition">Pausar</button>
+     <button id="stop-timer" class="px-4 py-2 text-sm text-gray-600 bg-gray-200 rounded-full hover:bg-gray-300 transition">Encerrar</button>
+    </div>
+   </div>
+  </div>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const workoutCards = document.querySelectorAll('[id^="treino-"]');
+    const startPopup = document.getElementById('start-workout-popup');
+    const workoutNameSpan = document.getElementById('workout-name');
+    const startButton = document.getElementById('start-workout');
+    const cancelButton = document.getElementById('cancel-workout');
+    const timerModal = document.getElementById('timer-modal');
+    const timerWorkoutName = document.getElementById('timer-workout-name');
+    const timerDisplay = document.getElementById('timer-display');
+    const timerStatus = document.getElementById('timer-status');
+    const pauseResumeButton = document.getElementById('pause-resume-timer');
+    const stopButton = document.getElementById('stop-timer');
+
+    let timerInterval = null;
+    let timeLeft = 0;
+    let isPaused = false;
+
+    function formatTime(seconds) {
+     const minutes = Math.floor(seconds / 60);
+     const secs = seconds % 60;
+     return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    function startTimer(duration) {
+     timeLeft = duration;
+     timerDisplay.textContent = formatTime(timeLeft);
+     timerStatus.classList.add('hidden');
+     pauseResumeButton.textContent = 'Pausar';
+     isPaused = false;
+
+     timerInterval = setInterval(() => {
+      if (!isPaused) {
+       timeLeft--;
+       timerDisplay.textContent = formatTime(timeLeft);
+       if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        timerDisplay.textContent = '00:00';
+        timerStatus.classList.remove('hidden');
+        pauseResumeButton.classList.add('hidden');
+       }
+      }
+     }, 1000);
+    }
+
+    function pauseResumeTimer() {
+     isPaused = !isPaused;
+     pauseResumeButton.textContent = isPaused ? 'Retomar' : 'Pausar';
+    }
+
+    function stopTimer() {
+     clearInterval(timerInterval);
+     timerModal.classList.add('hidden');
+     timeLeft = 0;
+     isPaused = false;
+     pauseResumeButton.textContent = 'Pausar';
+     pauseResumeButton.classList.remove('hidden');
+     timerStatus.classList.add('hidden');
+    }
+
+    workoutCards.forEach(card => {
+     card.addEventListener('click', () => {
+      const workoutTitle = card.querySelector('h3').textContent;
+      const durationText = card.querySelector('p').textContent.match(/(\d+)\s*min/);
+      const duration = durationText ? parseInt(durationText[1]) * 60 : 42 * 60; // Default 42 min se não encontrar
+      workoutNameSpan.textContent = workoutTitle;
+      startPopup.dataset.duration = duration;
+      startPopup.classList.remove('hidden');
+     });
+    });
+
+    cancelButton.addEventListener('click', () => {
+     startPopup.classList.add('hidden');
+    });
+
+    startButton.addEventListener('click', () => {
+     const workoutTitle = workoutNameSpan.textContent;
+     const duration = parseInt(startPopup.dataset.duration);
+     timerWorkoutName.textContent = workoutTitle;
+     startPopup.classList.add('hidden');
+     timerModal.classList.remove('hidden');
+     startTimer(duration);
+     console.log(`Iniciando treino: ${workoutTitle} com duração de ${duration / 60} minutos`);
+    });
+
+    pauseResumeButton.addEventListener('click', pauseResumeTimer);
+    stopButton.addEventListener('click', stopTimer);
+   });
+  </script>
+ </body>
+</html>

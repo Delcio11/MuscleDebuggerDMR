@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitoozone - Cadastro</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #8845bb;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-option input {
+            margin-right: 5px;
+        }
+        
+        .continue-btn {
+            background-color: #8845bb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .continue-btn:hover {
+            background-color: #8845bb;
+        }
+        
+        .divider {
+            margin: 25px 0;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fitoozone</h1>
+        
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" maxlength="30" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" maxlength="30" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" maxlength="30" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="height">Altura (metros)</label>
+                <input type="number" id="height" name="height" step="0.01" min="0.50" max="2.50" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="weight">Peso (kg)</label>
+                <input type="number" id="weight" name="weight" step="0.1" min="20" max="300" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Grau de Familiaridade</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="beginner" name="familiarity" value="0" required>
+                        <label for="beginner">Iniciante</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="intermedio" name="familiarity" value="1">
+                        <label for="advanced">Médio</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="advanced" name="familiarity" value="1">
+                        <label for="advanced">Avançado</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            <p>Já tem uma conta?<a href="login.html">Entrar</a></p>
+            
+            <button type="submit" class="continue-btn">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>

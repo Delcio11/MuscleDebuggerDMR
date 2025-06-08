@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitoozone - Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .login-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            color: #8845bb;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        .login-btn {
+            background-color: #8845bb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .login-btn:hover {
+            background-color: #8845bb;
+        }
+        
+        .forgot-password {
+            display: block;
+            margin-top: 15px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .forgot-password:hover {
+            color: #8845bb;
+        }
+        
+        .divider {
+            margin: 25px 0;
+            border-top: 1px solid #eee;
+            position: relative;
+        }
+        
+        .divider-text {
+            background-color: white;
+            padding: 0 10px;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .signup-link a {
+            color: #8845bb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">Fitoozone</div>
+        
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" maxlength="30" required placeholder="Digite seu email">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" maxlength="30" required placeholder="Digite sua senha">
+            </div>
+            
+            <button type="submit" class="login-btn">Entrar</button>
+            
+            <div class="divider">
+                <span class="divider-text">ou</span>
+            </div>
+            
+            <div class="signup-link">
+                Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

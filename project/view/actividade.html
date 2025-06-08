@@ -1,0 +1,719 @@
+<html lang="pt-br">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Painel de Atividade do Fitoozone
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#f3f7fc] min-h-screen flex flex-col">
+  <!-- Cabeçalho -->
+  <header class="bg-[#eaf2fc] border-b border-gray-300">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+     <div class="flex items-center space-x-6">
+      <img alt="Logotipo Fitoozone com figura abstrata em azul e roxo" class="w-8 h-8" height="32" src="https://storage.googleapis.com/a1aa/image/517c793a-1a4a-4eff-2e79-8beb00ba8576.jpg" width="32"/>
+      <span class="font-semibold text-gray-900 text-base select-none">
+       Fitoozone
+      </span>
+      <ul class="hidden md:flex space-x-8 text-gray-600 text-sm font-medium">
+       <li class="flex items-center space-x-1">
+        <a class="flex items-center space-x-1 hover:text-gray-700 transition" href="index.html">
+        <i class="fas fa-home text-gray-400 text-xs">
+        </i>
+        <span>
+         Visão Geral
+        </span>
+        </a>
+       </li>
+       <li class="flex items-center space-x-1">
+        <a class="flex items-center space-x-1 hover:text-gray-700 transition" href="treinos.html">
+        <i class="fas fa-dumbbell text-gray-400 text-xs">
+        </i>
+        <span>
+         Treinos
+        </span>
+        </a>
+       </li>
+       <li>
+        <button aria-current="page" class="flex items-center space-x-1 bg-white text-purple-700 font-semibold text-sm rounded-md px-4 py-2 shadow-md">
+         <a class="flex items-center space-x-1 hover:text-gray-700 transition" href="actividade.html">
+         <i class="fas fa-bullseye">
+         </i>
+         <span>
+          Atividade
+         </span>
+         </a>
+        </button>
+       </li>
+       <li class="flex items-center space-x-1">
+        <a class="flex items-center space-x-1 hover:text-gray-700 transition" href="usuario.html">
+        <i class="far fa-user text-gray-400 text-xs">
+        </i>
+        <span>
+         Usuário
+        </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="flex items-center space-x-3">
+      <div class="relative">
+       <input class="w-48 sm:w-64 rounded-lg border border-gray-300 py-2 pl-10 pr-4 text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Pesquisar algo" type="text"/>
+       <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">
+       </i>
+      </div>
+      <button aria-label="Alternar modo escuro" class="bg-white p-2 rounded-lg border border-gray-300 text-gray-600 hover:text-gray-900">
+       <i class="fas fa-moon">
+       </i>
+      </button>
+      <button aria-label="Notificações" class="relative bg-white p-2 rounded-lg border border-gray-300 text-gray-600 hover:text-gray-900">
+       <i class="far fa-bell">
+       </i>
+       <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">
+        2
+       </span>
+      </button>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <!-- Conteúdo principal -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+   <h1 class="text-2xl font-extrabold text-gray-900 mb-1 select-none">
+    Atividade
+   </h1>
+   <p class="text-sm text-gray-600 mb-6 select-none">
+    Aqui estão suas atividades diárias e relatórios
+   </p>
+   <!-- Seletor de data -->
+   <div class="flex flex-wrap gap-2 mb-6 select-none">
+    <button class="w-16 h-16 bg-white rounded-lg shadow flex flex-col items-center justify-center text-gray-900 font-semibold text-sm">
+     <span>
+      11
+     </span>
+     <span class="text-xs text-gray-400">
+      Nov
+     </span>
+    </button>
+    <button class="w-16 h-16 bg-white rounded-lg shadow flex flex-col items-center justify-center text-gray-900 font-semibold text-sm">
+     <span>
+      15
+     </span>
+     <span class="text-xs text-gray-400">
+      Nov
+     </span>
+    </button>
+    <button class="w-16 h-16 bg-purple-700 rounded-lg shadow-lg flex flex-col items-center justify-center text-white font-semibold text-sm">
+     <span>
+      12
+     </span>
+     <span class="text-xs">
+      Set
+     </span>
+    </button>
+    <button class="w-16 h-16 bg-white rounded-lg shadow flex flex-col items-center justify-center text-gray-900 font-semibold text-sm">
+     <span>
+      14
+     </span>
+     <span class="text-xs text-gray-400">
+      Nov
+     </span>
+    </button>
+    <button class="w-16 h-16 bg-white rounded-lg shadow flex flex-col items-center justify-center text-gray-900 font-semibold text-sm">
+     <span>
+      13
+     </span>
+     <span class="text-xs text-gray-400">
+      Nov
+     </span>
+    </button>
+    <button class="w-16 h-16 bg-white rounded-lg shadow flex flex-col items-center justify-center text-gray-900 font-semibold text-sm">
+     <span>
+      15
+     </span>
+     <span class="text-xs text-gray-400">
+      Nov
+     </span>
+    </button>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
+    <!-- Passos -->
+    <div class="col-span-1 md:col-span-2 bg-white rounded-xl shadow p-5 flex flex-col items-center select-none">
+     <div class="self-start flex items-center font-semibold text-gray-900 mb-2">
+      <span class="mr-2 text-xl">
+       🦶
+      </span>
+      Passos
+      <button aria-label="Mais opções" class="ml-auto text-gray-400 hover:text-gray-600">
+       <i class="fas fa-ellipsis-v">
+       </i>
+      </button>
+     </div>
+     <div class="relative w-28 h-28">
+      <svg class="w-28 h-28" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+       <circle cx="50" cy="50" r="44" stroke="#ddd" stroke-width="12">
+       </circle>
+       <circle cx="50" cy="50" r="44" stroke="#6b46c1" stroke-dasharray="276.46" stroke-dashoffset="110" stroke-linecap="round" stroke-width="12" transform="rotate(-90 50 50)">
+       </circle>
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center font-bold text-gray-900 text-xl">
+       <span>
+        1234
+       </span>
+       <span class="text-xs font-normal">
+        Passos
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Distância -->
+    <div class="col-span-1 bg-white rounded-xl shadow p-5 flex flex-col select-none">
+     <div class="flex items-center font-semibold text-gray-900 mb-2">
+      <span class="mr-2 text-xl">
+       🚗
+      </span>
+      Distância
+      <button aria-label="Mais opções" class="ml-auto text-gray-400 hover:text-gray-600">
+       <i class="fas fa-ellipsis-v">
+       </i>
+      </button>
+     </div>
+     <div class="text-2xl font-bold text-gray-900">
+      6,4
+      <span class="text-sm font-normal text-gray-500">
+       quilômetros
+      </span>
+     </div>
+    </div>
+    <!-- Último Treino -->
+    <div class="col-span-1 bg-white rounded-xl shadow p-5 flex flex-col select-none">
+     <div class="flex items-center font-semibold text-gray-900 mb-2">
+      <span class="mr-2 text-xl">
+       💪
+      </span>
+      Último Treino
+      <button aria-label="Mais opções" class="ml-auto text-gray-400 hover:text-gray-600">
+       <i class="fas fa-ellipsis-v">
+       </i>
+      </button>
+     </div>
+     <div class="text-2xl font-bold text-gray-900">
+      55
+      <span class="text-sm font-normal text-gray-500">
+       minutos
+      </span>
+     </div>
+    </div>
+    <!-- Água -->
+    <div class="col-span-1 bg-white rounded-xl shadow p-5 flex flex-col select-none">
+     <div class="flex items-center font-semibold text-gray-900 mb-2">
+      <span class="mr-2 text-xl">
+       💧
+      </span>
+      Água
+      <button aria-label="Mais opções" class="ml-auto text-gray-400 hover:text-gray-600">
+       <i class="fas fa-ellipsis-v">
+       </i>
+      </button>
+     </div>
+     <div class="flex items-end space-x-1 mb-2">
+      <div class="w-3 h-10 bg-blue-500 rounded-t-sm">
+      </div>
+      <div class="w-3 h-12 bg-blue-500 rounded-t-sm">
+      </div>
+      <div class="w-3 h-10 bg-blue-500 rounded-t-sm">
+      </div>
+      <div class="w-3 h-12 bg-blue-500 rounded-t-sm">
+      </div>
+      <div class="w-3 h-12 bg-blue-500 rounded-t-sm">
+      </div>
+      <div class="w-3 h-10 bg-blue-500 rounded-t-sm">
+      </div>
+      <div class="w-3 h-12 bg-blue-500 rounded-t-sm">
+      </div>
+     </div>
+     <div class="w-full h-10 bg-blue-200 rounded-t-3xl relative overflow-hidden">
+      <svg class="absolute bottom-0 left-0 w-full h-10" fill="none" preserveaspectratio="none" viewbox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M0 20 Q25 40 50 20 T100 20 V40 H0 Z" fill="#bfdbfe">
+       </path>
+      </svg>
+     </div>
+     <div class="mt-1 text-gray-900 font-semibold text-sm select-text">
+      <span class="font-bold">
+       2,2
+      </span>
+      litros
+     </div>
+    </div>
+    <!-- Calorias -->
+    <div class="col-span-1 bg-white rounded-xl shadow p-5 flex flex-col items-center select-none">
+     <div class="self-start flex items-center font-semibold text-gray-900 mb-2">
+      <span class="mr-2 text-xl">
+       🔥
+      </span>
+      Calorias
+      <button aria-label="Mais opções" class="ml-auto text-gray-400 hover:text-gray-600">
+       <i class="fas fa-ellipsis-v">
+       </i>
+      </button>
+     </div>
+     <div class="relative w-28 h-28">
+      <svg class="w-28 h-28" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+       <circle cx="50" cy="50" r="44" stroke="#ddd" stroke-width="12">
+       </circle>
+       <circle cx="50" cy="50" r="44" stroke="#2dd4bf" stroke-dasharray="276.46" stroke-dashoffset="110" stroke-linecap="round" stroke-width="12" transform="rotate(-90 50 50)">
+       </circle>
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center font-bold text-gray-900 text-xl">
+       <span>
+        2200
+       </span>
+       <span class="text-xs font-normal">
+        Kcal
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Banner de Acesso Premium -->
+    <div class="col-span-1 md:col-span-3 lg:col-span-6 bg-gradient-to-r from-pink-300 to-purple-500 rounded-xl shadow p-5 flex items-center justify-between select-none">
+     <div class="text-gray-900 font-semibold text-base max-w-xs">
+      Desbloquear Acesso Premium
+     </div>
+     <div class="flex items-center space-x-4">
+      <img alt="Mulher sorridente com faixa de cabelo branca segurando uma bola de exercício rosa e faixa de resistência" class="rounded-lg" height="80" src="https://storage.googleapis.com/a1aa/image/168a5de5-4033-48e4-c6c3-1bfecd97ee5b.jpg" width="80"/>
+      <button class="bg-purple-700 text-white text-sm font-semibold rounded-full px-5 py-2 shadow-md hover:bg-purple-800">
+       Atualizar Agora
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Grade grande do lado direito -->
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 select-none">
+    <!-- Sono -->
+    <section aria-label="Gráfico de sono mostrando acordado, sono e sono profundo das 23 às 06 horas" class="bg-white rounded-xl shadow p-5">
+     <div class="flex items-center mb-3">
+      <span class="text-2xl mr-2 select-text">
+       🛌
+      </span>
+      <h2 class="font-semibold text-gray-900 text-lg select-text">
+       Sono
+      </h2>
+      <div class="ml-auto font-bold text-gray-900 text-xl select-text">
+       7
+       <span class="font-normal">
+        h
+       </span>
+       <span class="text-lg font-semibold">
+        50
+       </span>
+       <span class="font-normal">
+        min
+       </span>
+      </div>
+     </div>
+     <svg aria-hidden="true" class="w-full h-24" fill="none" viewbox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+       <lineargradient id="sleepGradient" x1="0" x2="0" y1="0" y2="1">
+        <stop stop-color="#7c3aed" stop-opacity="0.4">
+        </stop>
+        <stop offset="1" stop-color="#7c3aed" stop-opacity="0">
+        </stop>
+       </lineargradient>
+      </defs>
+      <path d="M0 10 L20 80 L40 50 L60 60 L80 50 L100 90 L120 20 L140 80 L160 10 L180 90 L200 20 L220 80 L240 10 L260 80 L280 20 L300 80" fill="url(#sleepGradient)" fill-opacity="0.4" stroke="#7c3aed" stroke-width="2">
+      </path>
+      <line stroke="#7c3aed" stroke-dasharray="4 4" stroke-opacity="0.3" x1="0" x2="300" y1="10" y2="10">
+      </line>
+      <line stroke="#7c3aed" stroke-dasharray="4 4" stroke-opacity="0.3" x1="0" x2="300" y1="50" y2="50">
+      </line>
+      <line stroke="#7c3aed" stroke-dasharray="4 4" stroke-opacity="0.3" x1="0" x2="300" y1="80" y2="80">
+      </line>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="0" y="8">
+       Acordado
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="0" y="48">
+       Sono
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="0" y="78">
+       Sono profundo
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="0" y="98">
+       Hora
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="20" y="98">
+       23
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="60" y="98">
+       00
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="100" y="98">
+       01
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="140" y="98">
+       02
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="180" y="98">
+       03
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="220" y="98">
+       04
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="260" y="98">
+       05
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="300" y="98">
+       06
+      </text>
+     </svg>
+    </section>
+    <!-- Frequência cardíaca -->
+    <section aria-label="Gráfico de frequência cardíaca com valores de bpm de 0 a 140 ao longo de 24 horas" class="bg-white rounded-xl shadow p-5">
+     <div class="flex items-center mb-3">
+      <span class="text-2xl mr-2 select-text">
+       ❤️
+      </span>
+      <h2 class="font-semibold text-gray-900 text-lg select-text">
+       Frequência cardíaca
+      </h2>
+      <div class="ml-auto font-bold text-gray-900 text-xl select-text">
+       77
+       <span class="font-normal text-base">
+        bpm
+       </span>
+      </div>
+     </div>
+     <svg aria-hidden="true" class="w-full h-24" fill="none" viewbox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+       <lineargradient id="heartGradient" x1="0" x2="0" y1="0" y2="1">
+        <stop stop-color="#f87171" stop-opacity="0.4">
+        </stop>
+        <stop offset="1" stop-color="#f87171" stop-opacity="0">
+        </stop>
+       </lineargradient>
+      </defs>
+      <path d="M0 40 L10 50 L20 30 L30 60 L40 40 L50 70 L60 30 L70 80 L80 40 L90 70 L100 30 L110 80 L120 40 L130 70 L140 30 L150 80 L160 40 L170 70 L180 30 L190 80 L200 40 L210 70 L220 30 L230 80 L240 40 L250 70 L260 30 L270 80 L280 40 L290 70 L300 30" fill="url(#heartGradient)" fill-opacity="0.4" stroke="#f87171" stroke-width="2">
+      </path>
+      <line stroke="#f87171" stroke-dasharray="4 4" stroke-opacity="0.3" x1="0" x2="0" y1="0" y2="100">
+      </line>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="0" y="98">
+       00:00
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="60" y="98">
+       06:00
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="120" y="98">
+       12:00
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="180" y="98">
+       18:00
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" x="240" y="98">
+       23:59
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="10">
+       140
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="40">
+       80
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="70">
+       40
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="90">
+       0
+      </text>
+     </svg>
+    </section>
+    <!-- Histórico de treinos -->
+    <section aria-label="Histórico de treinos com dias e detalhes dos treinos" class="bg-white rounded-xl shadow p-5 flex flex-col select-none">
+     <h2 class="font-semibold text-gray-900 text-lg mb-3">
+      Histórico de treinos
+     </h2>
+     <div class="flex items-center justify-between border border-gray-300 rounded-lg px-4 py-2 mb-4 text-center text-gray-600 text-xs font-semibold select-none">
+      <div class="flex flex-col items-center w-8">
+       <span>
+        D
+       </span>
+       <span class="text-gray-400">
+        14
+       </span>
+      </div>
+      <div class="flex flex-col items-center w-8">
+       <span>
+        S
+       </span>
+       <button aria-label="Treino concluído na segunda-feira" class="w-5 h-5 rounded-full bg-purple-700 text-white flex items-center justify-center">
+        <i class="fas fa-check text-xs">
+        </i>
+       </button>
+       <span class="text-gray-400 text-xs mt-1">
+        15
+       </span>
+      </div>
+      <div class="flex flex-col items-center w-8">
+       <span>
+        T
+       </span>
+       <div class="w-5 h-5 rounded-full border border-gray-300">
+       </div>
+       <span class="text-gray-400 text-xs mt-1">
+        16
+       </span>
+      </div>
+      <div class="flex flex-col items-center w-8">
+       <span>
+        Q
+       </span>
+       <button aria-label="Treino concluído na quarta-feira" class="w-5 h-5 rounded-full bg-purple-700 text-white flex items-center justify-center">
+        <i class="fas fa-check text-xs">
+        </i>
+       </button>
+       <span class="text-gray-400 text-xs mt-1">
+        17
+       </span>
+      </div>
+      <div class="flex flex-col items-center w-8">
+       <span>
+        Q
+       </span>
+       <div class="w-5 h-5 rounded-full border border-gray-300">
+       </div>
+       <span class="text-gray-400 text-xs mt-1">
+        18
+       </span>
+      </div>
+      <div class="flex flex-col items-center w-8">
+       <span>
+        S
+       </span>
+       <button aria-label="Treino concluído na sexta-feira" class="w-5 h-5 rounded-full bg-purple-700 text-white flex items-center justify-center">
+        <i class="fas fa-check text-xs">
+        </i>
+       </button>
+       <span class="text-gray-400 text-xs mt-1">
+        19
+       </span>
+      </div>
+      <div class="flex flex-col items-center w-8">
+       <span>
+        S
+       </span>
+       <div class="w-5 h-5 rounded-full border border-gray-300">
+       </div>
+       <span class="text-gray-400 text-xs mt-1">
+        20
+       </span>
+      </div>
+     </div>
+     <div class="text-xs text-gray-500 mb-2 select-text">
+      08 de setembro, 2023
+     </div>
+     <div class="text-xs text-gray-500 mb-4 flex justify-between select-text">
+      <span>
+       2 treinos, 120 minutos
+      </span>
+     </div>
+     <div class="space-y-3">
+      <div aria-label="Treino de Ioga de Corpo Inteiro das 08:30 às 09:15" class="flex items-center bg-[#ffb07f] rounded-lg p-3 shadow cursor-default">
+       <img alt="Mulher fazendo uma pose de ioga em fundo laranja" class="w-14 h-14 rounded-lg object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/3defcc73-d271-4313-1468-9613edc520ed.jpg" width="60"/>
+       <div class="ml-4 flex-grow">
+        <div class="font-semibold text-gray-900 text-sm select-text">
+         Ioga de Corpo Inteiro
+        </div>
+        <div class="text-xs text-gray-700 select-text">
+         08:30 - 09:15
+        </div>
+       </div>
+       <button aria-label="Treino de Ioga de Corpo Inteiro concluído" class="w-6 h-6 rounded-full bg-purple-700 text-white flex items-center justify-center">
+        <i class="fas fa-check text-xs">
+        </i>
+       </button>
+      </div>
+      <div aria-label="Treino de Escultura da Parte Superior do Corpo das 16:30 às 17:15" class="flex items-center bg-[#3a8a8a] rounded-lg p-3 shadow cursor-default">
+       <img alt="Mulher fazendo exercício de escultura da parte superior do corpo em fundo teal" class="w-14 h-14 rounded-lg object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/27a24994-f8df-46a4-7c3b-f34b8105abb1.jpg" width="60"/>
+       <div class="ml-4 flex-grow">
+        <div class="font-semibold text-gray-900 text-sm select-text">
+         Escultura da Parte Superior do Corpo
+        </div>
+        <div class="text-xs text-gray-700 select-text">
+         16:30 - 17:15
+        </div>
+       </div>
+       <button aria-label="Treino de Escultura da Parte Superior do Corpo concluído" class="w-6 h-6 rounded-full bg-purple-700 text-white flex items-center justify-center">
+        <i class="fas fa-check text-xs">
+        </i>
+       </button>
+      </div>
+     </div>
+     <div class="text-xs text-gray-500 mt-6 mb-2 select-text">
+      04 de setembro, 2023
+     </div>
+     <div class="text-xs text-gray-500 mb-4 flex justify-between select-text">
+      <span>
+       2 treinos, 60 minutos
+      </span>
+     </div>
+     <div aria-label="Treino de Escultura Corporal Total das 16:30 às 16:55" class="flex items-center bg-[#7c3aed] rounded-lg p-3 shadow cursor-default">
+      <img alt="Mulher fazendo exercício de escultura corporal total em fundo roxo" class="w-14 h-14 rounded-lg object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/3acc9856-9199-4a41-7269-eea104d8cc63.jpg" width="60"/>
+      <div class="ml-4 flex-grow">
+       <div class="font-semibold text-gray-900 text-sm select-text">
+        Escultura Corporal Total
+       </div>
+       <div class="text-xs text-gray-700 select-text">
+        16:30 - 16:55
+       </div>
+      </div>
+      <button aria-label="Treino de Escultura Corporal Total concluído" class="w-6 h-6 rounded-full bg-purple-700 text-white flex items-center justify-center">
+       <i class="fas fa-check text-xs">
+       </i>
+      </button>
+     </div>
+    </section>
+   </div>
+   <!-- Gráficos inferiores -->
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 select-none">
+    <!-- Acompanhamento de peso -->
+    <section aria-label="Gráfico de acompanhamento de peso com valores de 54,3 a 54,7" class="bg-white rounded-xl shadow p-5">
+     <h2 class="font-semibold text-gray-900 text-lg mb-3 select-text">
+      Acompanhamento de peso
+     </h2>
+     <svg aria-hidden="true" class="w-full h-24" fill="none" viewbox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" fill="none" r="44">
+      </circle>
+      <path d="M20 60 L60 80 L100 40 L140 90 L180 60 L220 80 L260 60" fill="none" stroke="#6b46c1" stroke-width="2">
+      </path>
+      <circle cx="20" cy="60" fill="#6b46c1" r="4">
+      </circle>
+      <circle cx="60" cy="80" fill="#6b46c1" r="4">
+      </circle>
+      <circle cx="100" cy="40" fill="#6b46c1" r="4">
+      </circle>
+      <circle cx="140" cy="90" fill="#6b46c1" r="4">
+      </circle>
+      <circle cx="180" cy="60" fill="#6b46c1" r="4">
+      </circle>
+      <circle cx="220" cy="80" fill="#6b46c1" r="4">
+      </circle>
+      <circle cx="260" cy="60" fill="#6b46c1" r="4">
+      </circle>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="20" y="98">
+       D
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="60" y="98">
+       S
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="100" y="98">
+       T
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="140" y="98">
+       Q
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="180" y="98">
+       Q
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="220" y="98">
+       S
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="260" y="98">
+       S
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="20">
+       54,7
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="40">
+       54,6
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="60">
+       54,5
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="80">
+       54,4
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="100">
+       54,3
+      </text>
+     </svg>
+    </section>
+    <!-- Calorias queimadas -->
+    <section aria-label="Gráfico de barras de calorias queimadas com valores de 0 a 1200" class="bg-white rounded-xl shadow p-5">
+     <h2 class="font-semibold text-gray-900 text-lg mb-3 select-text">
+      Calorias queimadas
+     </h2>
+     <svg aria-hidden="true" class="w-full h-24" fill="none" viewbox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+      <rect fill="#fbbf24" height="40" width="20" x="20" y="60">
+      </rect>
+      <rect fill="#fbbf24" height="80" width="20" x="60" y="20">
+      </rect>
+      <rect fill="#fbbf24" height="30" width="20" x="100" y="70">
+      </rect>
+      <rect fill="#fbbf24" height="90" width="20" x="140" y="10">
+      </rect>
+      <rect fill="#fbbf24884-="none" height="50" width="20" x="80" y="50">
+      </rect>
+      <rect fill="#ffb24f" height="60" width="20" x="220" y="40"/>
+      <rect fill="#bf24bb" height="30" width="20" x="260" y="70"/>
+     </svg>
+     <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="20" y="98">
+      D
+     </text>
+     <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="60" y="98">
+      S
+     </text>
+     <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="100" y="98">
+      T
+     </text>
+     <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="140" y="98">
+      Q
+     </text>
+     <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="180" y="98">
+      Q
+     </text>
+     <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="220" y="98">
+      S
+     </text>
+     <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" x="260" y="98">
+      S
+     </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="20">
+      1200
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="40">
+      800
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="600">
+      600
+      </text>
+      <text fill="#4b5563" font-family="Inter, sans-serif" font-size="10" text-anchor="end" x="280" y="80">
+      400
+      </text>
+      <text fill="#4b563" font-family="Inter" sans-serif font-size="10" text-anchor="end" x="280" y="100">
+      0
+      </text>
+    </div>
+  </main>
+  <!-- Rodapé -->
+  <footer class="bg-white border-t border-gray-300 py-3">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 select-none">
+    <div>
+     Direitos Autorais © 2023 Todos os Direitos Reservados
+    </div>
+  <div class="flex items-center space-x-1 mt-2 md:mt-0">
+     <img alt="https://storage.googleapis.com/a1aa/image/f32e597c-af1f-4390-e1d3-189d56a249ed.jpg" class="w-4 h-4" height="16" src <svg class="icon-16" width="16"/>
+     <span>
+     Design e Desenvolvimento por Merkulove
+     </span>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
