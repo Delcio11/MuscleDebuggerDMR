@@ -1,0 +1,319 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Fitoozone Trainings
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#f4f9ff] text-[#1a1a1a] min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-[#f4f9ff] border-b border-gray-200">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+     <div class="flex items-center space-x-3">
+      <img alt="Fitoozone logo, stylized letter F with abstract figure" class="w-8 h-8" height="32" src="https://storage.googleapis.com/a1aa/image/ecd30030-a29e-4d56-96e8-75ba9ddaa48e.jpg" width="32"/>
+      <span class="font-semibold text-[#1a1a1a] text-lg select-none">
+       Fitoozone
+      </span>
+     </div>
+     <ul class="hidden md:flex items-center space-x-8 text-sm text-gray-500 select-none">
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+       <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="index.html">
+       <i class="far fa-circle text-xs">
+       </i>
+       <span>
+        Visão Geral
+       </span>
+       </a>
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer text-[#6c4ee3] font-semibold bg-white rounded-full px-3 py-1 shadow-sm">
+        <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="treinos.html">
+       <i class="fas fa-dumbbell text-[#6c4ee3]">
+       </i>
+       <span>
+        Treinos
+       </span>
+       </a>
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+       <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="actividade.html">
+       <i class="far fa-circle text-xs">
+       </i>
+       <span>
+        Actividade
+       </span>
+       </a> 
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+       <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="usuario.html">
+       <i class="far fa-circle text-xs">
+       </i>
+       <span>
+        Usuário
+       </span>
+       </a>
+      </li>
+     </ul>
+     <div class="hidden md:flex items-center space-x-3">
+      <div class="relative">
+       <input class="w-48 rounded-full bg-white border border-gray-300 text-sm pl-9 pr-3 py-1.5 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#6c4ee3]" placeholder="Search something" type="text"/>
+       <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
+       </i>
+      </div>
+      <button aria-label="Toggle dark mode" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-[#6c4ee3] transition">
+       <i class="far fa-moon">
+       </i>
+      </button>
+      <button aria-label="Notifications" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-[#6c4ee3] relative transition">
+       <i class="far fa-bell">
+       </i>
+       <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-[#f44336] rounded-full border border-white">
+       </span>
+      </button>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <!-- Main content -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+   <h1 class="text-2xl font-extrabold mb-1 select-none">
+    Trainings
+   </h1>
+   <p class="text-xs text-gray-600 mb-5 select-none">
+    Here is your daily activities &amp; reports
+   </p>
+   <!-- Filters -->
+   <div class="flex flex-wrap gap-2 mb-6 select-none">
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">
+     Clear All
+    </button>
+    <button class="text-xs text-white bg-[#6c4ee3] rounded-full px-3 py-1 font-semibold">
+     Beginner
+    </button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">
+     Medium
+    </button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">
+     Advanced
+    </button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">
+     10-20 min
+    </button>
+    <button class="text-xs text-gray-500 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition">
+     20-40 min
+    </button>
+   </div>
+   <!-- Training cards grid -->
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- Card 1 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman lying on exercise ball holding dumbbell against blue background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/152fbdca-eb18-4278-22a7-3685952bacb4.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       Strength and Conditioning
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman doing power yoga flow with resistance band on purple background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/514916a5-e5ca-4331-f185-278bc9aa8818.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       Power Yoga Flow
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman doing high-intensity interval training on pink mat with pink background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/92db5b6e-f4cc-4d18-0e34-9d376e452dc0.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       High-Intensity Interval
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman doing pilates reformer class stretching on gray background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8da5b4dc-78c0-45b1-dc6a-7e30f1847f57.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       Pilates Reformer Class
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman doing functional core training with exercise ball on light blue background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b07183b9-7333-4cb2-0be6-080d7edff8f9.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       Functional Core Training
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman doing calisthenics strength training with pink exercise ball on pink background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1f077bee-eed9-473f-3d73-0da1b4d4a9c0.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       Calisthenics Strength Training
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 7 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman doing yoga for stress relief on purple background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/29974232-00c7-4f54-dfcf-aaf97347f23b.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       Yoga for Stress Relief
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 8 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman doing body sculpting circuit with medicine ball on dark background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/63906806-d638-4245-364e-b7b57c10d6b4.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <div class="mt-2">
+      <h3 class="text-sm font-semibold leading-tight">
+       Body Sculpting Circuit
+      </h3>
+      <p class="text-xs text-gray-600 mt-0.5">
+       <span class="font-semibold">
+        Beginner
+       </span>
+       • 42 min
+      </p>
+     </div>
+    </div>
+    <!-- Card 9 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman lying on orange exercise ball stretching on gray background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c3e8ce07-f9ad-4c38-4a19-1ae47d8128b7.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+    </div>
+    <!-- Card 10 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Two women doing core exercises on floor against light gray wall" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2ad38952-b6ad-40e1-fe5f-fb82b1fa93cd.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+    </div>
+    <!-- Card 11 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman lifting small dumbbells in blue outfit against blue background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7d7a771b-f0ec-4ba0-da25-ab382d8ec0fd.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+    </div>
+    <!-- Card 12 -->
+    <div class="relative rounded-md overflow-hidden cursor-pointer select-none">
+     <img alt="Woman lying backwards on exercise ball in black leggings against white background" class="w-full h-40 object-cover" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/261af649-1058-4ee5-689a-0aebe0708069.jpg" width="400"/>
+     <button aria-label="Favorite" class="absolute top-2 right-2 w-5 h-5 bg-white bg-opacity-70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+      <i class="far fa-heart">
+      </i>
+     </button>
+    </div>
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-2 text-xs text-gray-600 select-none">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <span>
+     Copyright © 2023 All Rights Reserved
+    </span>
+    <span class="flex items-center space-x-1">
+     <img alt="Merkulove logo, stylized M letter" class="w-4 h-4" height="16" src="https://storage.googleapis.com/a1aa/image/3b843428-33bf-4057-f834-d6a09dce44df.jpg" width="16"/>
+     <span>
+      Design &amp; Develop by Merkulove
+     </span>
+    </span>
+   </div>
+  </footer>
+ </body>
+</html>

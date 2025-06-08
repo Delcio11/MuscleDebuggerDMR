@@ -1,0 +1,560 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Fitoozone Profile
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#f0f6ff] text-[#1e1e1e] min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-[#f0f6ff] border-b border-[#dce3f0]">
+   <div class="max-w-[1200px] mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
+    <div class="flex items-center space-x-2">
+     <img alt="Fitoozone logo, stylized letter F with blue and purple colors" class="w-8 h-8" height="32" src="https://storage.googleapis.com/a1aa/image/5e30c40e-9d6e-4634-6b4b-fbdf68c94dbb.jpg" width="32"/>
+     <span class="font-semibold text-[#1e1e1e] text-lg select-none">
+      Fitoozone
+     </span>
+    </div>
+    <nav class="hidden md:flex items-center space-x-8 text-sm text-[#7a7a7a] select-none">
+     <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="index.html">
+      <i class="fas fa-home text-xs">
+      </i>
+      <span>
+       Visão Geral
+      </span>
+     </a>
+     <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="treinos.html">
+      <i class="fas fa-dumbbell text-xs">
+      </i>
+      <span>
+       Treinos
+      </span>
+     </a>
+     <a class="flex items-center space-x-1 hover:text-[#1e1e1e]" href="actividade.html">
+      <i class="fas fa-check-circle text-xs">
+      </i>
+      <span>
+       Actividade
+      </span>
+     </a>
+     <a aria-current="page" class="flex items-center space-x-1 bg-[#f0f0ff] text-[#4c3cff] rounded-full px-4 py-1 text-sm font-semibold" href="usuario.html">
+      <i class="fas fa-user text-sm">
+      </i>
+      <span>
+        Usuário
+      </span>
+     </a>
+    </nav>
+    <div class="flex items-center space-x-3">
+     <div class="relative hidden md:block">
+      <input class="pl-8 pr-3 py-1 rounded-md border border-[#dce3f0] text-sm text-[#7a7a7a] focus:outline-none focus:ring-1 focus:ring-[#4c3cff] focus:border-[#4c3cff] w-48" placeholder="Search something" type="text"/>
+      <i aria-hidden="true" class="fas fa-search absolute left-2 top-1/2 -translate-y-1/2 text-[#7a7a7a] text-xs">
+      </i>
+     </div>
+     <button aria-label="Toggle dark mode" class="w-9 h-9 rounded-md border border-[#dce3f0] flex items-center justify-center text-[#7a7a7a] hover:text-[#4c3cff] transition">
+      <i class="fas fa-moon">
+      </i>
+     </button>
+     <button aria-label="Notifications" class="w-9 h-9 rounded-md border border-[#dce3f0] flex items-center justify-center text-[#7a7a7a] hover:text-[#4c3cff] relative transition">
+      <i class="fas fa-bell">
+      </i>
+      <span class="absolute -top-1 -right-1 w-4 h-4 bg-[#ff4d4d] rounded-full border-2 border-[#f0f6ff]">
+      </span>
+     </button>
+    </div>
+   </div>
+  </header>
+  <!-- Main content -->
+  <main class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-6 px-4 sm:px-6 py-6 flex-grow">
+   <!-- Left column -->
+   <section class="flex-shrink-0 w-full md:w-[320px] space-y-6">
+    <h1 class="text-xl font-bold text-[#1e1e1e] select-none">
+     Profile
+    </h1>
+    <p class="text-xs text-[#7a7a7a] select-none">
+     Here is your daily activities &amp; reports
+    </p>
+    <!-- Profile card -->
+    <div class="bg-white rounded-lg shadow-sm p-5 space-y-5">
+     <div class="flex items-center space-x-4">
+      <img alt="Profile picture of Mary Smith, woman with dark hair and teal shirt" class="w-16 h-16 rounded-full object-cover" height="64" src="https://storage.googleapis.com/a1aa/image/7492d964-253a-4eb2-8926-d0c5876ed511.jpg" width="64"/>
+      <div>
+       <h2 class="font-semibold text-[#1e1e1e] text-sm select-text">
+        Mary Smith
+       </h2>
+       <span class="inline-block mt-1 px-3 py-1 text-xs font-semibold rounded-full bg-[#6b46c1] text-white select-none">
+        Go Premium
+       </span>
+      </div>
+     </div>
+     <div class="flex space-x-3 text-center text-xs text-[#7a7a7a] select-none">
+      <div class="flex-1 bg-[#f9f9f9] rounded-lg py-3 border border-[#e6e6e6]">
+       <i class="fas fa-weight-hanging text-[#7a7a7a] text-sm">
+       </i>
+       <div class="font-semibold text-[#1e1e1e] mt-1">
+        55 kg
+       </div>
+      </div>
+      <div class="flex-1 bg-[#f9f9f9] rounded-lg py-3 border border-[#e6e6e6]">
+       <i class="fas fa-ruler-vertical text-[#7a7a7a] text-sm">
+       </i>
+       <div class="font-semibold text-[#1e1e1e] mt-1">
+        167 cm
+       </div>
+      </div>
+      <div class="flex-1 bg-[#f9f9f9] rounded-lg py-3 border border-[#e6e6e6]">
+       <i class="fas fa-heartbeat text-[#7a7a7a] text-sm">
+       </i>
+       <div class="font-semibold text-[#1e1e1e] mt-1">
+        72 bpm
+       </div>
+      </div>
+     </div>
+     <div class="space-y-3 text-xs text-[#7a7a7a] select-none">
+      <div class="flex justify-between items-center border-b border-[#e6e6e6] pb-2">
+       <span>
+        Name
+       </span>
+       <span class="text-[#b3b3b3]">
+        Mary Smith
+       </span>
+       <i class="fas fa-chevron-right text-[#b3b3b3] text-xs">
+       </i>
+      </div>
+      <div class="flex justify-between items-center border-b border-[#e6e6e6] pb-2">
+       <span>
+        Gender
+       </span>
+       <span class="text-[#b3b3b3]">
+        Female
+       </span>
+       <i class="fas fa-chevron-right text-[#b3b3b3] text-xs">
+       </i>
+      </div>
+      <div class="flex justify-between items-center border-b border-[#e6e6e6] pb-2">
+       <span>
+        Date of birth
+       </span>
+       <span class="text-[#b3b3b3]">
+        22 May 1995
+       </span>
+       <i class="fas fa-chevron-right text-[#b3b3b3] text-xs">
+       </i>
+      </div>
+      <div class="flex justify-between items-center border-b border-[#e6e6e6] pb-2">
+       <span>
+        Height
+       </span>
+       <span class="text-[#b3b3b3]">
+        172 cm
+       </span>
+       <i class="fas fa-chevron-right text-[#b3b3b3] text-xs">
+       </i>
+      </div>
+      <div class="flex justify-between items-center">
+       <span>
+        Weight
+       </span>
+       <span class="text-[#b3b3b3]">
+        62 kg
+       </span>
+       <i class="fas fa-chevron-right text-[#b3b3b3] text-xs">
+       </i>
+      </div>
+      <div class="flex justify-between items-center mt-3">
+       <span>
+        Max heart rate
+       </span>
+       <span class="text-[#b3b3b3]">
+        195 bpm
+       </span>
+       <i class="fas fa-chevron-right text-[#b3b3b3] text-xs">
+       </i>
+      </div>
+     </div>
+    </div>
+    <!-- Newsletter subscription -->
+    <div class="bg-[#e6e8ff] rounded-lg p-5 text-xs text-[#4c4c4c] select-none">
+     <h3 class="font-semibold mb-1 text-[#1e1e1e]">
+      Subscribe to Our Newsletter
+     </h3>
+     <p class="mb-3 leading-tight">
+      Subscribe to our newsletter for the latest updates, exclusive content, and special offers
+          delivered directly to your inbox
+     </p>
+     <form class="flex flex-col space-y-3">
+      <label class="sr-only" for="email">
+       Email address
+      </label>
+      <div class="relative">
+       <i class="fas fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-[#7a7a7a] text-xs">
+       </i>
+       <input class="w-full rounded-full py-2 pl-9 pr-4 text-xs text-[#4c4c4c] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#4c3cff] focus:border-transparent bg-white" id="email" placeholder="mary.smith@example.com" type="email"/>
+      </div>
+      <button class="bg-[#6b46c1] text-white rounded-full py-2 text-sm font-semibold hover:bg-[#5a3db8] transition" type="submit">
+       Subscribe
+      </button>
+     </form>
+    </div>
+   </section>
+   <!-- Middle column -->
+   <section class="flex flex-col gap-6 w-full md:w-[400px]">
+    <!-- Account -->
+    <div class="bg-white rounded-lg shadow-sm p-5 space-y-5">
+     <h3 class="font-semibold text-sm text-[#1e1e1e] select-none">
+      Account
+     </h3>
+     <nav class="flex flex-col text-xs text-[#7a7a7a] select-none">
+      <a class="flex justify-between items-center border-b border-[#e6e6e6] py-3 hover:text-[#4c3cff] transition" href="#">
+       Account
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+      <a class="flex justify-between items-center border-b border-[#e6e6e6] py-3 hover:text-[#4c3cff] transition" href="#">
+       My workouts 🚀
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+      <a class="flex justify-between items-center border-b border-[#e6e6e6] py-3 hover:text-[#4c3cff] transition" href="#">
+       Workout reminders
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+      <a class="flex justify-between items-center py-3 hover:text-[#4c3cff] transition" href="#">
+       Log out
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+     </nav>
+    </div>
+    <!-- Weight tracking -->
+    <div class="bg-white rounded-lg shadow-sm p-5 space-y-5 text-xs text-[#7a7a7a] select-none relative">
+     <div class="flex justify-between items-center">
+      <h3 class="font-semibold text-sm text-[#1e1e1e]">
+       Weight tracking
+      </h3>
+      <button class="text-[#6b46c1] font-semibold text-xs hover:underline focus:outline-none" type="button">
+       Add
+      </button>
+     </div>
+     <div class="space-y-4">
+      <div class="flex justify-between items-center">
+       <div>
+        <div class="font-semibold text-[#1e1e1e] text-sm">
+         52.7 kg
+        </div>
+        <div class="text-[10px]">
+         Today
+        </div>
+       </div>
+       <div class="text-[10px] text-[#fca5a5] text-right">
+        +0.1 kg
+        <div>
+         7:02
+        </div>
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <div>
+        <div class="font-semibold text-[#1e1e1e] text-sm">
+         52.6 kg
+        </div>
+        <div class="text-[10px]">
+         Nov 13, 2021
+        </div>
+       </div>
+       <div class="text-[10px] text-[#86efac] text-right">
+        -0.3 kg
+        <div>
+         8:46
+        </div>
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <div>
+        <div class="font-semibold text-[#1e1e1e] text-sm">
+         52.9 kg
+        </div>
+        <div class="text-[10px]">
+         Nov 14, 2021
+        </div>
+       </div>
+       <div class="text-[10px] text-[#fca5a5] text-right">
+        +0.3 kg
+        <div>
+         9:22
+        </div>
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <div>
+        <div class="font-semibold text-[#1e1e1e] text-sm">
+         52.7 kg
+        </div>
+        <div class="text-[10px]">
+         Nov 15, 2021
+        </div>
+       </div>
+       <div class="text-[10px] text-[#86efac] text-right">
+        -0.2 kg
+        <div>
+         6:50
+        </div>
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <div>
+        <div class="font-semibold text-[#1e1e1e] text-sm">
+         52.9 kg
+        </div>
+        <div class="text-[10px]">
+         Nov 16, 2021
+        </div>
+       </div>
+       <div class="text-[10px] text-[#86efac] text-right">
+        -0.1 kg
+        <div>
+         7:40
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Fitness Star -->
+    <div aria-label="Fitness Star award notification" class="bg-[#e6e8ff] rounded-lg p-4 flex items-center space-x-4 select-none">
+     <div class="flex-1 text-xs">
+      <h4 class="font-semibold text-[#1e1e1e] text-sm mb-1">
+       Fitness Star
+      </h4>
+      <p class="leading-tight">
+       Got an award for your calorie-burning journey
+      </p>
+     </div>
+     <img alt="Two golden trophies with stars, representing Fitness Star award" class="w-16 h-16 object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/183a4453-a161-4005-5213-b22db5097229.jpg" width="64"/>
+    </div>
+   </section>
+   <!-- Right column -->
+   <section class="flex flex-col gap-6 w-full md:w-[400px]">
+    <!-- Settings -->
+    <div class="bg-white rounded-lg shadow-sm p-5 space-y-5 text-xs text-[#7a7a7a] select-none">
+     <h3 class="font-semibold text-sm text-[#1e1e1e]">
+      Settings
+     </h3>
+     <nav class="flex flex-col space-y-3">
+      <a class="flex justify-between items-center border-b border-[#e6e6e6] py-2 hover:text-[#4c3cff] transition" href="#">
+       Preferences
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+      <a class="flex justify-between items-center border-b border-[#e6e6e6] py-2 hover:text-[#4c3cff] transition" href="#">
+       Plan Settings
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+      <div class="flex justify-between items-center border-b border-[#e6e6e6] py-2">
+       <span>
+        Pin Lock
+       </span>
+       <label class="inline-flex relative items-center cursor-pointer" for="pinlock" title="Toggle Pin Lock">
+        <input aria-checked="true" checked="" class="sr-only peer" id="pinlock" type="checkbox"/>
+        <div class="w-10 h-5 bg-gray-300 rounded-full peer peer-checked:bg-[#6b46c1] peer-focus:ring-2 peer-focus:ring-[#6b46c1] transition">
+        </div>
+        <div class="absolute left-0.5 top-0.5 bg-white w-4 h-4 rounded-full shadow-md transform peer-checked:translate-x-5 transition">
+        </div>
+       </label>
+      </div>
+      <div class="flex justify-between items-center border-b border-[#e6e6e6] py-2">
+       <span>
+        Apple Health
+       </span>
+       <label class="inline-flex relative items-center cursor-pointer" for="applehealth" title="Toggle Apple Health">
+        <input aria-checked="true" checked="" class="sr-only peer" id="applehealth" type="checkbox"/>
+        <div class="w-10 h-5 bg-gray-300 rounded-full peer peer-checked:bg-[#6b46c1] peer-focus:ring-2 peer-focus:ring-[#6b46c1] transition">
+        </div>
+        <div class="absolute left-0.5 top-0.5 bg-white w-4 h-4 rounded-full shadow-md transform peer-checked:translate-x-5 transition">
+        </div>
+       </label>
+      </div>
+      <div class="flex justify-between items-center border-b border-[#e6e6e6] py-2">
+       <span>
+        Dark Mode
+       </span>
+       <label class="inline-flex relative items-center cursor-pointer" for="darkmode" title="Toggle Dark Mode">
+        <input aria-checked="false" class="sr-only peer" id="darkmode" type="checkbox"/>
+        <div class="w-10 h-5 bg-gray-300 rounded-full peer peer-checked:bg-[#6b46c1] peer-focus:ring-2 peer-focus:ring-[#6b46c1] transition">
+        </div>
+        <div class="absolute left-0.5 top-0.5 bg-white w-4 h-4 rounded-full shadow-md transform peer-checked:translate-x-5 transition">
+        </div>
+       </label>
+      </div>
+      <a class="flex justify-between items-center py-2 hover:text-[#4c3cff] transition" href="#">
+       Contacts Support
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+     </nav>
+    </div>
+    <!-- Music Provider -->
+    <div class="bg-white rounded-lg shadow-sm p-5 space-y-3 text-xs text-[#7a7a7a] select-none">
+     <h3 class="font-semibold text-sm text-[#1e1e1e]">
+      Music Provider
+     </h3>
+     <p class="leading-tight">
+      Listen to your favorite music while exercising. The best music streaming services
+          include access to millions of songs.
+     </p>
+     <nav class="flex flex-col space-y-2">
+      <a class="flex justify-between items-center border border-[#e6e6e6] rounded-md px-3 py-2 hover:text-[#4c3cff] transition text-[#7a7a7a]" href="#">
+       Spotify
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+      <a class="flex justify-between items-center border border-[#e6e6e6] rounded-md px-3 py-2 hover:text-[#4c3cff] transition text-[#7a7a7a]" href="#">
+       Apple Music
+       <i class="fas fa-chevron-right text-xs">
+       </i>
+      </a>
+     </nav>
+    </div>
+    <!-- My workouts -->
+    <div class="bg-white rounded-lg shadow-sm p-5 space-y-4 text-xs text-[#7a7a7a] select-none">
+     <div class="flex justify-between items-center">
+      <h3 class="font-semibold text-sm text-[#1e1e1e]">
+       My workouts
+      </h3>
+      <nav class="flex space-x-2 text-xs font-semibold text-white select-none">
+       <button aria-current="true" class="bg-[#6b46c1] rounded-full px-3 py-1 hover:bg-[#5a3db8] transition" type="button">
+        History
+       </button>
+       <button class="bg-[#f0f0ff] text-[#7a7a7a] rounded-full px-3 py-1 hover:bg-[#d6d6ff] transition" type="button">
+        Last
+       </button>
+       <button class="bg-[#f0f0ff] text-[#7a7a7a] rounded-full px-3 py-1 hover:bg-[#d6d6ff] transition" type="button">
+        Favorites
+       </button>
+      </nav>
+     </div>
+     <div class="text-[10px] text-[#7a7a7a] select-none">
+      September 08, 2023
+     </div>
+     <div class="text-[10px] text-[#7a7a7a] mb-2 select-none">
+      2 workout, 120 minutes
+     </div>
+     <article class="flex items-center space-x-3 bg-[#f0f0ff] rounded-lg p-2 cursor-pointer hover:bg-[#d6d6ff] transition">
+      <img alt="Full Body Yoga workout image, person doing yoga pose on orange background" class="w-12 h-12 rounded-md object-cover flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/6eb7ec80-2202-4506-5d69-d9986c161d85.jpg" width="48"/>
+      <div class="flex-1">
+       <h4 class="font-semibold text-[12px] text-[#1e1e1e]">
+        Full Body Yoga
+       </h4>
+       <time class="text-[10px] text-[#7a7a7a]">
+        08:30 - 09:15
+       </time>
+      </div>
+     </article>
+     <article class="flex items-center space-x-3 bg-[#f0f0ff] rounded-lg p-2 cursor-pointer hover:bg-[#d6d6ff] transition">
+      <img alt="Functional Training workout image, person exercising with dumbbells on teal background" class="w-12 h-12 rounded-md object-cover flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/162e319f-574d-4252-37d4-e30b37c7fcf6.jpg" width="48"/>
+      <div class="flex-1">
+       <h4 class="font-semibold text-[12px] text-[#1e1e1e]">
+        Functional Training
+       </h4>
+       <time class="text-[10px] text-[#7a7a7a]">
+        08:30 - 09:15
+       </time>
+      </div>
+      <i class="fas fa-check-circle text-[#6b46c1] text-sm">
+      </i>
+     </article>
+     <div class="text-[10px] text-[#7a7a7a] select-none mt-4">
+      September 04, 2023
+     </div>
+     <div class="text-[10px] text-[#7a7a7a] mb-2 select-none">
+      2 workout, 60 minutes
+     </div>
+     <article class="flex items-center space-x-3 bg-[#f0f0ff] rounded-lg p-2 cursor-pointer hover:bg-[#d6d6ff] transition">
+      <img alt="Interval Cardio Blast workout image, person running on dark teal background" class="w-12 h-12 rounded-md object-cover flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/8ce0f53d-af14-489f-4657-6d58d0c9cb47.jpg" width="48"/>
+      <div class="flex-1">
+       <h4 class="font-semibold text-[12px] text-[#1e1e1e]">
+        Interval Cardio Blast
+       </h4>
+       <time class="text-[10px] text-[#7a7a7a]">
+        08:30 - 09:15
+       </time>
+      </div>
+      <i class="fas fa-check-circle text-[#6b46c1] text-sm">
+      </i>
+     </article>
+     <article class="flex items-center space-x-3 bg-[#f0f0ff] rounded-lg p-2 cursor-pointer hover:bg-[#d6d6ff] transition">
+      <img alt="Pilates Reformer Class workout image, person doing pilates on pink background" class="w-12 h-12 rounded-md object-cover flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/f0f50447-7c32-44cd-c8ca-9c001db7340c.jpg" width="48"/>
+      <div class="flex-1">
+       <h4 class="font-semibold text-[12px] text-[#1e1e1e]">
+        Pilates Reformer Class
+       </h4>
+       <time class="text-[10px] text-[#7a7a7a]">
+        08:30 - 09:15
+       </time>
+      </div>
+      <i class="fas fa-check-circle text-[#6b46c1] text-sm">
+      </i>
+     </article>
+     <div class="text-[10px] text-[#7a7a7a] select-none mt-4">
+      September 02, 2023
+     </div>
+     <div class="text-[10px] text-[#7a7a7a] mb-2 select-none">
+      2 workout, 60 minutes
+     </div>
+     <article class="flex items-center space-x-3 bg-[#f0f0ff] rounded-lg p-2 cursor-pointer hover:bg-[#d6d6ff] transition">
+      <img alt="CrossFit Workout workout image, person lifting weights on purple background" class="w-12 h-12 rounded-md object-cover flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/eccd92e3-5aa6-4904-3e28-a17c3a65aedf.jpg" width="48"/>
+      <div class="flex-1">
+       <h4 class="font-semibold text-[12px] text-[#1e1e1e]">
+        CrossFit Workout
+       </h4>
+       <time class="text-[10px] text-[#7a7a7a]">
+        08:30 - 09:15
+       </time>
+      </div>
+      <i class="fas fa-check-circle text-[#6b46c1] text-sm">
+      </i>
+     </article>
+     <article class="flex items-center space-x-3 bg-[#f0f0ff] rounded-lg p-2 cursor-pointer hover:bg-[#d6d6ff] transition">
+      <img alt="Functional Core workout image, person doing core exercises on brown background" class="w-12 h-12 rounded-md object-cover flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/61d67a8f-0774-4296-2083-b9f1338ccb8e.jpg" width="48"/>
+      <div class="flex-1">
+       <h4 class="font-semibold text-[12px] text-[#1e1e1e]">
+        Functional Core
+       </h4>
+       <time class="text-[10px] text-[#7a7a7a]">
+        08:30 - 09:15
+       </time>
+      </div>
+      <i class="fas fa-check-circle text-[#6b46c1] text-sm">
+      </i>
+     </article>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#f0f6ff] border-t border-[#dce3f0] py-3 text-[10px] text-[#7a7a7a] select-none">
+   <div aria-label="Copyright and developer credit" class="max-w-[1200px] mx-auto flex items-center justify-center space-x-1 px-4 sm:px-6">
+    <span>
+     Copyright © 2023 All Rights Reserved
+    </span>
+    <span class="mx-2">
+     |
+    </span>
+    <img alt="Merkulove logo, stylized letter M in blue" class="w-4 h-4" height="16" src="https://storage.googleapis.com/a1aa/image/54f25397-c4de-4e0a-5af7-38a88fefa475.jpg" width="16"/>
+    <span>
+     Design &amp; Develop by Merkulove
+    </span>
+   </div>
+  </footer>
+ </body>
+</html>
