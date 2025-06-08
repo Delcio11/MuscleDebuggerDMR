@@ -1,0 +1,512 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Create Workout - Fitoozone
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#F5FAFF] text-[#1E1E1E] min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-[#F0F7FF] border-b border-[#E6E6E6]">
+   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+     <div class="flex items-center space-x-3">
+      <img alt="Fitoozone logo, stylized letter F with a person running" class="w-8 h-8" height="32" src="https://storage.googleapis.com/a1aa/image/69d75246-c601-40d1-dbd6-62d3639003db.jpg" width="32"/>
+      <span class="font-semibold text-[#1E1E1E] text-lg select-none">
+       Fitoozone
+      </span>
+     </div>
+     <ul class="hidden md:flex items-center space-x-8 text-sm text-[#6B7280] font-normal">
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-[#4F46E5]">
+       <i class="far fa-compass text-[14px]">
+       </i>
+       <span>
+        Overview
+       </span>
+      </li>
+      <li>
+       <button aria-current="page" class="flex items-center space-x-1 bg-[#4F46E5] text-white rounded-full px-4 py-1 text-sm font-semibold">
+        <i class="fas fa-dumbbell text-[14px]">
+        </i>
+        <span>
+         Trainings
+        </span>
+       </button>
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-[#4F46E5]">
+       <i class="far fa-chart-line text-[14px]">
+       </i>
+       <span>
+        Activity
+       </span>
+      </li>
+      <li class="flex items-center space-x-1 cursor-pointer hover:text-[#4F46E5]">
+       <i class="far fa-user text-[14px]">
+       </i>
+       <span>
+        Profile
+       </span>
+      </li>
+     </ul>
+     <div class="flex items-center space-x-3">
+      <div class="relative">
+       <input class="w-40 sm:w-56 md:w-64 rounded-full bg-white border border-[#E6E6E6] text-[#6B7280] text-sm pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4F46E5]" placeholder="Search something" type="text"/>
+       <i aria-hidden="true" class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-[#6B7280] text-sm">
+       </i>
+      </div>
+      <button aria-label="Toggle dark mode" class="w-10 h-10 bg-white border border-[#E6E6E6] rounded-lg flex items-center justify-center text-[#4F46E5] hover:bg-[#EEF2FF] transition">
+       <i class="fas fa-moon">
+       </i>
+      </button>
+      <button aria-label="Notifications" class="w-10 h-10 bg-white border border-[#E6E6E6] rounded-lg relative flex items-center justify-center text-[#6B7280] hover:bg-[#EEF2FF] transition">
+       <i class="fas fa-bell">
+       </i>
+       <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#FF4D4F] rounded-full border-2 border-white">
+       </span>
+      </button>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <!-- Main content -->
+  <main class="flex-grow max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+    <h1 class="text-2xl font-extrabold text-[#1E1E1E]">
+     Create Workout
+    </h1>
+    <button class="mt-4 sm:mt-0 bg-[#4F46E5] text-white text-sm font-semibold rounded-full px-6 py-2 hover:bg-[#4338CA] transition">
+     Create Workout
+    </button>
+   </div>
+   <div class="mb-4 text-xs text-[#4F46E5] font-semibold flex flex-wrap gap-1">
+    <a class="hover:underline" href="#">
+     Trainings
+    </a>
+    <span>
+     •
+    </span>
+    <span class="text-[#6B7280] font-normal">
+     Create Workout
+    </span>
+   </div>
+   <div class="flex flex-col lg:flex-row gap-6">
+    <!-- Left panel -->
+    <section aria-label="Custom Workout" class="bg-white rounded-xl p-6 w-full lg:w-[320px] flex-shrink-0 shadow-sm">
+     <h2 class="font-semibold text-base mb-1">
+      Custom Workout
+     </h2>
+     <p class="text-xs text-[#6B7280] mb-4 leading-tight">
+      Log each workout you complete to keep track of your fitness program!
+     </p>
+     <input class="w-full rounded-md border border-[#E6E6E6] bg-[#F9FAFB] text-xs text-[#6B7280] px-3 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-[#4F46E5]" placeholder="Workout name" type="text"/>
+     <div class="mb-4">
+      <h3 class="text-xs font-semibold mb-1">
+       Choose Level
+      </h3>
+      <div class="flex flex-col space-y-2">
+       <label class="block border border-[#4F46E5] rounded-md p-3 cursor-pointer" for="level-beginner">
+        <input checked="" class="hidden" id="level-beginner" name="level" type="radio"/>
+        <div class="text-xs font-semibold text-[#1E1E1E]">
+         Beginner
+        </div>
+        <div class="text-[9px] text-[#6B7280] mt-0.5">
+         I want to start training
+        </div>
+       </label>
+       <label class="block border border-[#E6E6E6] rounded-md p-3 cursor-pointer" for="level-irregular">
+        <input class="hidden" id="level-irregular" name="level" type="radio"/>
+        <div class="text-[9px] font-semibold text-[#1E1E1E]">
+         Irregular training
+        </div>
+        <div class="text-[9px] text-[#6B7280] mt-0.5">
+         I train 1-2 times a week
+        </div>
+       </label>
+       <label class="block border border-[#E6E6E6] rounded-md p-3 cursor-pointer" for="level-medium">
+        <input class="hidden" id="level-medium" name="level" type="radio"/>
+        <div class="text-[9px] font-semibold text-[#1E1E1E]">
+         Medium
+        </div>
+        <div class="text-[9px] text-[#6B7280] mt-0.5">
+         I train 3-5 times a week
+        </div>
+       </label>
+       <label class="block border border-[#E6E6E6] rounded-md p-3 cursor-pointer" for="level-advanced">
+        <input class="hidden" id="level-advanced" name="level" type="radio"/>
+        <div class="text-[9px] font-semibold text-[#1E1E1E]">
+         Advanced
+        </div>
+        <div class="text-[9px] text-[#6B7280] mt-0.5">
+         I train more than 5 times a week
+        </div>
+       </label>
+      </div>
+     </div>
+     <div class="flex flex-col space-y-4 text-xs">
+      <button class="flex justify-between items-center border-b border-[#E6E6E6] pb-1 text-[#6B7280] font-semibold" type="button">
+       <span>
+        Choose Equipment
+       </span>
+       <span class="text-[#9CA3AF]">
+        2 Dumbbells, Mat
+       </span>
+       <i class="fas fa-chevron-right text-xs ml-2">
+       </i>
+      </button>
+      <button class="flex justify-between items-center border-b border-[#E6E6E6] pb-1 text-[#6B7280] font-semibold" type="button">
+       <span>
+        Choose Focus Area
+       </span>
+       <span class="text-[#9CA3AF]">
+        Legs, Core muscles
+       </span>
+       <i class="fas fa-chevron-right text-xs ml-2">
+       </i>
+      </button>
+      <div class="flex justify-between items-center">
+       <span class="font-semibold text-[#1E1E1E]">
+        Includes Warm-Up
+       </span>
+       <label class="relative inline-flex items-center cursor-pointer" for="warmup-toggle" title="Toggle Includes Warm-Up">
+        <input checked="" class="sr-only peer" id="warmup-toggle" type="checkbox"/>
+        <div class="w-11 h-6 bg-[#4F46E5] rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all">
+        </div>
+       </label>
+      </div>
+      <div class="flex justify-between items-center">
+       <span class="font-semibold text-[#1E1E1E]">
+        Includes Stretching
+       </span>
+       <label class="relative inline-flex items-center cursor-pointer" for="stretching-toggle" title="Toggle Includes Stretching">
+        <input checked="" class="sr-only peer" id="stretching-toggle" type="checkbox"/>
+        <div class="w-11 h-6 bg-[#4F46E5] rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all">
+        </div>
+       </label>
+      </div>
+     </div>
+    </section>
+    <!-- Middle panel -->
+    <section aria-label="Full body workout" class="bg-white rounded-xl p-6 flex-grow shadow-sm max-w-[600px]">
+     <div class="flex items-center justify-between mb-4">
+      <h2 class="font-semibold text-base">
+       Full body workout
+      </h2>
+      <button aria-label="Edit full body workout" class="text-[#6B7280] text-xs hover:underline focus:outline-none">
+       <i class="fas fa-pen">
+       </i>
+      </button>
+     </div>
+     <div class="flex justify-between text-center text-xs font-semibold text-[#1E1E1E] mb-6">
+      <div class="flex flex-col w-1/3">
+       <span class="text-2xl font-extrabold">
+        12
+       </span>
+       <span class="mt-1">
+        Exercises
+       </span>
+      </div>
+      <div class="flex flex-col w-1/3 border-x border-[#E6E6E6]">
+       <span class="text-2xl font-extrabold">
+        30:00
+       </span>
+       <span class="mt-1">
+        Time
+       </span>
+      </div>
+      <div class="flex flex-col w-1/3">
+       <span class="text-2xl font-extrabold">
+        260
+       </span>
+       <span class="mt-1">
+        Calorie
+       </span>
+      </div>
+     </div>
+     <div class="flex flex-col space-y-4 text-xs text-[#6B7280] mb-6">
+      <button class="flex justify-between items-center border-b border-[#E6E6E6] pb-1" type="button">
+       <span>
+        Choose Equipment
+       </span>
+       <span class="text-[#9CA3AF]">
+        2 Dumbbells, Mat
+       </span>
+       <i class="fas fa-chevron-right text-xs ml-2">
+       </i>
+      </button>
+      <button class="flex justify-between items-center border-b border-[#E6E6E6] pb-1" type="button">
+       <span>
+        Choose Focus Area
+       </span>
+       <span class="text-[#9CA3AF]">
+        Legs, Core muscles
+       </span>
+       <i class="fas fa-chevron-right text-xs ml-2">
+       </i>
+      </button>
+     </div>
+     <!-- Warm-Up -->
+     <div class="mb-6">
+      <div class="flex justify-between items-center mb-2 text-xs font-semibold text-[#1E1E1E]">
+       <span>
+        Warm-Up
+       </span>
+       <button aria-label="Edit Warm-Up exercises" class="text-[#4F46E5] hover:underline focus:outline-none" type="button">
+        Edit
+       </button>
+      </div>
+      <ul class="space-y-3">
+       <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+        <div class="flex items-center space-x-3">
+         <img alt="Exercise image showing person doing Double Heel Tabs" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/885c25a0-0e73-4130-6dcc-04fb08d910bd.jpg" width="48"/>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Double Heel Tabs
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          x 20
+         </div>
+        </div>
+        <button aria-label="More info about Double Heel Tabs" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+         <i class="fas fa-info-circle">
+         </i>
+        </button>
+       </li>
+       <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+        <div class="flex items-center space-x-3">
+         <img alt="Exercise image showing person doing Lung Jumps Alternated" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/24c3ff69-8fa5-4ac2-6807-7536f4044065.jpg" width="48"/>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Lung Jumps Alternated
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          x 20
+         </div>
+        </div>
+        <button aria-label="More info about Lung Jumps Alternated" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+         <i class="fas fa-info-circle">
+         </i>
+        </button>
+       </li>
+      </ul>
+     </div>
+     <!-- Workout -->
+     <div class="mb-6">
+      <h3 class="text-xs font-semibold text-[#1E1E1E] mb-2">
+       Workout
+      </h3>
+      <button class="flex items-center space-x-2 border border-[#E6E6E6] rounded-md p-3 text-xs font-semibold text-[#1E1E1E] bg-[#EEF2FF] hover:bg-[#E0E7FF] transition w-full max-w-[280px]" type="button">
+       <span class="text-2xl">
+        💪
+       </span>
+       <span>
+        Add Exercises
+       </span>
+      </button>
+     </div>
+     <!-- Stretching -->
+     <div>
+      <div class="flex justify-between items-center mb-2 text-xs font-semibold text-[#1E1E1E]">
+       <span>
+        Stretching
+       </span>
+       <button aria-label="Edit Stretching exercises" class="text-[#4F46E5] hover:underline focus:outline-none" type="button">
+        Edit
+       </button>
+      </div>
+      <ul class="space-y-3">
+       <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+        <div class="flex items-center space-x-3">
+         <img alt="Exercise image showing person doing Double Heel Tabs" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/885c25a0-0e73-4130-6dcc-04fb08d910bd.jpg" width="48"/>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Double Heel Tabs
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          x 20
+         </div>
+        </div>
+        <button aria-label="More info about Double Heel Tabs" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+         <i class="fas fa-info-circle">
+         </i>
+        </button>
+       </li>
+      </ul>
+     </div>
+    </section>
+    <!-- Right panel -->
+    <section aria-label="Best Exercises" class="bg-white rounded-xl p-6 w-full lg:w-[320px] flex-shrink-0 shadow-sm">
+     <div class="flex justify-between items-center mb-4">
+      <h2 class="font-semibold text-base">
+       Best Exercises
+      </h2>
+      <span class="text-xs text-[#6B7280]">
+       Exercises: 210
+      </span>
+     </div>
+     <button class="mb-4 bg-[#4F46E5] text-white text-[9px] font-semibold rounded-full px-4 py-1 hover:bg-[#4338CA] transition" type="button">
+      All Exercises
+     </button>
+     <ul class="space-y-3 max-h-[600px] overflow-y-auto pr-1">
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Front Lunge" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/aea1df12-7d2b-484d-594c-bb5a0ce4b0dc.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Front Lunge
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Front Lunge" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Leg Abduction" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/e9f850df-3946-4fe8-b9ef-067f72808413.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Leg Abduction
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Leg Abduction" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Arm circles" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/ae0d4df2-7669-4ba8-4bcc-5355b57c653e.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Arm circles
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Arm circles" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Leg Kickbacks" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/31b3b8cd-df80-4e8c-efdf-b7d0d72ccabf.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Leg Kickbacks
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Leg Kickbacks" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Turkish Get-Up" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/d6bbac67-1dd6-4783-77b3-1a802b060f1b.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Turkish Get-Up
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Turkish Get-Up" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Sit-Ups" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/8b69032a-8fb6-48c2-38d0-32dd11d833fe.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Sit-Ups
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Sit-Ups" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Sumo Squat" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/bf8cac56-3cf5-41b6-ed6b-477ae1a87458.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Sumo Squat
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Sumo Squat" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+      <li class="flex items-center justify-between border border-[#E6E6E6] rounded-md p-2">
+       <div class="flex items-center space-x-3">
+        <img alt="Exercise image showing person doing Sumo Squat" class="w-12 h-12 rounded-md object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/bf8cac56-3cf5-41b6-ed6b-477ae1a87458.jpg" width="48"/>
+        <div>
+         <div class="text-xs font-semibold text-[#1E1E1E]">
+          Sumo Squat
+         </div>
+         <div class="text-[9px] text-[#6B7280]">
+          0:30
+         </div>
+        </div>
+       </div>
+       <button aria-label="More info about Sumo Squat" class="text-[#9CA3AF] hover:text-[#4F46E5] focus:outline-none">
+        <i class="fas fa-info-circle">
+        </i>
+       </button>
+      </li>
+     </ul>
+    </section>
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-[#E6E6E6] py-3 text-[10px] text-[#6B7280] select-none">
+   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <span>
+     Copyright © 2023 All Rights Reserved
+    </span>
+    <span class="flex items-center space-x-1">
+     <img alt="Merkulove logo, stylized M letter" class="w-4 h-4" height="16" src="https://storage.googleapis.com/a1aa/image/e2d7399f-ab24-4c71-541e-cc2937ab3753.jpg" width="16"/>
+     <span>
+      Design &amp; Develop by Merkulove
+     </span>
+    </span>
+   </div>
+  </footer>
+ </body>
+</html>
